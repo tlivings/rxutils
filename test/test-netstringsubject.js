@@ -39,8 +39,7 @@ Test.only('test netstring stream subject', (t) => {
         );
 
         subject.next('hello world!');
-        subject.next('good');
-        subject.next('bye');
+        subject.next('4:good,4:bye!');
         subject.complete();
 
     });
