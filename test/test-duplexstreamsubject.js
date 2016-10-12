@@ -4,7 +4,7 @@ const Test = require('tape');
 const DuplexStreamSubject = require('../lib/duplexstreamsubject');
 const EchoStream = require('./fixtures/echostream');
 
-Test('test duplex stream subject', (t) => {
+Test.only('test duplex stream subject', (t) => {
 
     t.test('plan', (t) => {
         t.plan(1);

@@ -1,24 +1,10 @@
 'use strict';
 
-const DuplexStream = require('stream').Duplex;
+const PassThrough = require('stream').PassThrough;
 
-class EchoStream extends DuplexStream {
+class EchoStream extends PassThrough {
     constructor(options) {
         super(options);
-
-        this._pending = [];
-    }
-
-    _read() {
-        while (this._pending.length > 0) {
-            this.push(this._pending.shift());
-        }
-    }
-
-    _write(data, enc, callback) {
-        this._pending.push(data);
-
-        callback();
     }
 }
 

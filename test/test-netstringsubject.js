@@ -4,7 +4,7 @@ const Test = require('tape');
 const NetstringSubject = require('../lib/netstringsubject');
 const EchoStream = require('./fixtures/echostream');
 
-Test.only('test netstring stream subject', (t) => {
+Test('test netstring stream subject', (t) => {
 
     t.test('plan', (t) => {
         t.plan(3);
